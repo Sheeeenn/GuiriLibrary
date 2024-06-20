@@ -16,7 +16,7 @@ use glib\database;
         <title>
             TEST LIBRARY
         </title>
-        <link rel="stylesheet" type="text/css" href="views\css\home.css">
+        <!-- <link rel="stylesheet" type="text/css" href="views\css\home.css"> -->
     </head>
     <body>
         <section>

@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Home Page | Guiri</title>
-        <link rel="stylesheet" type="text/css" href="views/css/home.css">
+        <link rel="stylesheet" type="text/css" href="guirilibrary/views/css/home.css">
 
         
     </head>
@@ -14,7 +14,7 @@
 <div class="code-block">
 
     <div class="code-path">
-        <h3>Code</h3>
+        <h3>File/Index.php</h3>
     </div>
 
     <div class="code-code">
