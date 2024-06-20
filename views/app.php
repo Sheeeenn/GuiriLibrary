@@ -5,18 +5,18 @@ include("libraries\debug.php");
 use glib\database;
 
 
-// $data = new database ("localhost", "root", "", "testlib", "3306");
-// $data->data_create("users", "username, password", "'justin jhuad', 'guiriba2'");
-// $data->data_end();
+//$data = new database ("localhost", "root", "", "testlib", "3306");
+//$data->data_create("users", "username, password", "'justin josh', 'guiriba2'");
+//$data->data_end();
 
 ?>
 
 <html>
     <head>
         <title>
-            TEST LIBRARY2
+            TEST LIBRARY
         </title>
-        <link rel="stylesheet" type="text/css" href="views\css\styles.css">
+        <link rel="stylesheet" type="text/css" href="views\css\home.css">
     </head>
     <body>
         <section>

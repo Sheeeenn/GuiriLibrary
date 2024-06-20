@@ -1,0 +1,26 @@
+body {
+    color: red;
+}
+
+:root{
+    --body-lm-f: #000;
+    --body-lm-bg: #fff;
+    --body-dm-f: #fff;
+    --body-dm-bg: #000;
+    --test-yellow: #FFFF00;
+}
+
+.code-block {
+    background-color: var(--body-lm-bg);
+    box-shadow: 0px 0px 4px black;
+}
+
+.code-path {
+    background-color: var(--body-lm-bg);
+    color: var(--test-yellow);
+}
+
+.code-code {
+    background-color: var(--body-lm-bg);
+    color: var(--test-yellow);
+}

@@ -1,11 +1,25 @@
+<html>
+    <head>
+        <title>Home Page | Guiri</title>
+        <link rel="stylesheet" type="text/css" href="views/css/home.css">
+
+        
+    </head>
+
+
+<body>
 <h1>HOME</h1>
 <a href="GuiriLibrary">Login</a>
 
-<div>
+<div class="code-block">
 
-    <h3>Code</h3>
+    <div class="code-path">
+        <h3>Code</h3>
+    </div>
 
-    <pre><code>&lt;!DOCTYPE html>
+    <div class="code-code">
+
+        <pre><code>&lt;!DOCTYPE html>
 &lt;html&gt;
 
     &lt;head>
@@ -18,7 +32,12 @@
     &lt;/body>
     
 &lt;/html>
-    </code>
-    </pre>
+        </code>
+        </pre>
+
+    </div>
 
 </div>
+</body>
+
+</html>
