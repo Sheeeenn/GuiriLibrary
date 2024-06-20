@@ -4,15 +4,20 @@ include("libraries\debug.php");
 
 use glib\database;
 
+/* ADD INSTANCE ( OOP ) */
+//$data = new database ("localhost", "root", "", "testlib", "3306");
 
-$data = new database ("localhost", "root", "", "testlib", "3306");
+/* DATA CREATE */
 //$data->data_create("users", "username, password", "'justin josh', 'guiriba2'");
-//$test = [];
-$test =  $data->data_read("*", "users");
-foreach($test as $player){
-    echo $player['username']."<br>";
-}
-$data->data_end();
+
+/* DATA READ */
+// $test =  $data->data_read("*", "users");
+// foreach($test as $player){
+//     echo $player['username']."<br>";
+// }
+
+/* DATA END */
+//$data->data_end();
 
 ?>
 
