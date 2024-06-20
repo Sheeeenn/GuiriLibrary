@@ -27,14 +27,22 @@
 
         //ADD A ROW IN THE SPECIFIC DATABASE
         public function data_create ($tablename, $key, $value) {
-            $str = $this->addslash($value);
+            //$str = $this->addslash($value);
             $query = "INSERT INTO $tablename ($key) VALUES ($value)";
             $this->con->query($query);
         }
 
         //READ SPECIFIC DATA BASE ON USERS CHOICE
-        public function data_read () {
-            
+        public function data_read ($select, $tablename, $condition = "1=1") {
+            //$str = $this->addslash($value);
+            $query = "SELECT $select FROM $tablename WHERE $condition";
+            $result = $this->con->query($query);
+            $test = [];
+            while($row = $result->fetch_assoc()){
+                $test [] = $row;
+            }
+            $result->free();
+            return $test;
         }
 
         //UPDATE SPECIFIC USER DATA

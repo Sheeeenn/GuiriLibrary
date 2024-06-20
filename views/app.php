@@ -5,9 +5,14 @@ include("libraries\debug.php");
 use glib\database;
 
 
-//$data = new database ("localhost", "root", "", "testlib", "3306");
+$data = new database ("localhost", "root", "", "testlib", "3306");
 //$data->data_create("users", "username, password", "'justin josh', 'guiriba2'");
-//$data->data_end();
+//$test = [];
+$test =  $data->data_read("*", "users");
+foreach($test as $player){
+    echo $player['username']."<br>";
+}
+$data->data_end();
 
 ?>
 
