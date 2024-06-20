@@ -11,7 +11,7 @@ This is my own made PHP Library where you can use to make your own websites with
 > Last update: June 13, 2024
 
 ## Getting Started 
-
+This is how to print hello world in Python
 ```
 print("Hello World")
 ```
