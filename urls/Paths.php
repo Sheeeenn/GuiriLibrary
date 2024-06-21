@@ -1,5 +1,4 @@
 <?php 
-include("libraries\debug.php");
 
 class path {
 

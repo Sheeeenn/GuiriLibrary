@@ -1,6 +1,6 @@
 <?php 
 
-    namespace glib;
+    namespace glib;    
 
     class database {
         public $dbhost;
@@ -26,10 +26,20 @@
         }
 
         //ADD A ROW IN THE SPECIFIC DATABASE
-        public function data_create ($tablename, $key, $value) {
+        public function data_create ($tablename, $data) {
             //$str = $this->addslash($value);
-            $query = "INSERT INTO $tablename ($key) VALUES ($value)";
-            $this->con->query($query);
+            $columns = implode(", ", array_keys($data));
+            $placeholders = implode(", ", array_fill(0, count($data), '?'));
+
+            $query = "INSERT INTO $tablename ($columns) VALUES ($placeholders)";
+            $stmt = $this->con->prepare($query);
+
+            $types = str_repeat('s', count($data)); // Assuming all data are strings. Adjust as necessary.
+            $values = array_values($data);
+            
+            $stmt->bind_param($types, ...$values);
+            $stmt->execute();
+            $stmt->close();
         }
 
         //READ SPECIFIC DATA BASE ON USERS CHOICE

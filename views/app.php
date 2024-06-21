@@ -1,6 +1,6 @@
 <?php 
+include("libraries\debug.php");
 include("libraries\GLIB.php");
-//include("libraries\debug.php");
 
 use glib\database;
 
@@ -8,7 +8,11 @@ use glib\database;
 $data = new database ("localhost", "root", "", "testlib", "3306");
 
 /* DATA CREATE */
-//$data->data_create("users", "username, password", "'justin josh', 'guiriba2'");
+//$userdata = [
+  //  'username' => 'Zyldjan',
+  //  'password' => '2004UE'
+//];
+//$data->data_create("users", $userdata);
 
 /* DATA READ */
 // $test =  $data->data_read("*", "users");
@@ -23,7 +27,7 @@ $data = new database ("localhost", "root", "", "testlib", "3306");
 //$data->data_delete("users", "id = 11");
 
 /* DATA END */
-//$data->data_end();
+$data->data_end();
 
 ?>
 
