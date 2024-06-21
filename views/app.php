@@ -26,9 +26,11 @@ use glib\database;
         <title>
             TEST LIBRARY
         </title>
-        <!-- <link rel="stylesheet" type="text/css" href="views\css\home.css"> -->
+        <link rel="stylesheet" type="text/css" href="views/bootstrap/css/bootstrap.min.css">
+        <script src="views/bootstrap/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
+        
         <section>
             <div class="loginform-container">
                 <h3 class="login-text">Login</h3>
@@ -48,5 +50,6 @@ use glib\database;
                 </form>
             </div>
         </section>
+        
     </body>
 </html>
