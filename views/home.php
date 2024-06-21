@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Home Page | Guiri</title>
-        <link rel="stylesheet" type="text/css" href="guirilibrary/views/css/home.css">
+        <link rel="stylesheet" type="text/css" href="views/css/home.css">
 
         
     </head>
@@ -9,7 +9,7 @@
 
 <body>
 <h1>HOME</h1>
-<a href="GuiriLibrary">Login</a>
+<a href="/">Login</a>
 
 <div class="code-block">
 
