@@ -1,11 +1,21 @@
 <?php 
-include("libraries\debug.php");
-include("libraries\GLIB.php");
+require("libraries\GLIB_Debug.php");
+require("libraries\GLIB_Database.php");
+require("libraries\GLIB_DBFunctions.php");
 
-use glib\database;
 
 /* ADD INSTANCE ( OOP ) */
-$data = new database ("localhost", "root", "", "testlib", "3306");
+//$data = new database ();
+
+/*AUTHENTICATE LOGIN*/
+// $username = "'justin'";
+// $password = "'guiriba2'";
+// $auth =  authenticate("users", "username=$username", "password=$password");
+// if($auth == true){
+//     echo("LOGIN SUCCESS!");
+// } else {
+//     echo("LOGIN FAILED!");
+// }
 
 /* DATA CREATE */
 //$userdata = [
@@ -27,7 +37,7 @@ $data = new database ("localhost", "root", "", "testlib", "3306");
 //$data->data_delete("users", "id = 11");
 
 /* DATA END */
-$data->data_end();
+//$data->data_end();
 
 ?>
 
@@ -37,8 +47,8 @@ $data->data_end();
             TEST LIBRARY
             
         </title>
-        <link rel="stylesheet" type="text/css" href="views/bootstrap/css/bootstrap.min.css">
-        <script src="views/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
         
@@ -58,6 +68,7 @@ $data->data_end();
                     </div>
                     <input type="submit">
                     <a href="/home">home</a>
+                    <h1>ERROR CODE</h1>
                 </form>
             </div>
         </section>
