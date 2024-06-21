@@ -1,6 +1,6 @@
 <?php 
 include("libraries\GLIB.php");
-include("libraries\debug.php");
+//include("libraries\debug.php");
 
 use glib\database;
 

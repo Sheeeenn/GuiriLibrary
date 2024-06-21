@@ -1,4 +1,5 @@
 <?php 
+include("libraries\debug.php");
 
 class path {
 
@@ -6,7 +7,7 @@ class path {
 
     public static function request ($paths) {
 
-        $uri = $_SERVER['REQUEST_URI'];
+        $uri = parse_url($_SERVER['REQUEST_URI'])["path"];
         $new_uri = explode("/GuiriLibrary", $uri);
 
         foreach ($paths as $path) {
