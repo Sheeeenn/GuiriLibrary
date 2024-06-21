@@ -43,6 +43,7 @@
         //READ SPECIFIC DATA BASE ON USERS CHOICE
         public function data_read ($select, $tablename, $condition) {
             //$str = $this->addslash($value);
+            //mysqli_real_escape_string($con, $_GET['search'])
             $query = "SELECT $select FROM $tablename WHERE $condition";
             $result = $this->con->query($query);
             $datas = [];
