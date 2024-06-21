@@ -33,26 +33,57 @@
         }
 
         //READ SPECIFIC DATA BASE ON USERS CHOICE
-        public function data_read ($select, $tablename, $condition = "1=1") {
+        public function data_read ($select, $tablename, $condition) {
             //$str = $this->addslash($value);
             $query = "SELECT $select FROM $tablename WHERE $condition";
             $result = $this->con->query($query);
-            $test = [];
+            $datas = [];
             while($row = $result->fetch_assoc()){
-                $test [] = $row;
+                $datas [] = $row;
             }
             $result->free();
-            return $test;
+            return $datas;
+        }
+
+        //READ ALL OF THE DATA BASE ON USERS CHOICE
+        public function data_read_all ($select, $tablename) {
+            //$str = $this->addslash($value);
+            $query = "SELECT $select FROM $tablename";
+            $result = $this->con->query($query);
+            $datas = [];
+            while($row = $result->fetch_assoc()){
+                $datas [] = $row;
+            }
+            $result->free();
+            return $datas;
         }
 
         //UPDATE SPECIFIC USER DATA
-        public function data_update () {
-
+        public function data_update ($tablename, $columnname, $condition) {
+            //$str = $this->addslash($value);
+            $query = "UPDATE $tablename SET $columnname WHERE $condition";
+            $this->con->query($query);
+        }
+        
+        //UPDATE SPECIFIC USER DATA
+        public function data_update_all ($tablename, $columnname) {
+            //$str = $this->addslash($value);
+            $query = "UPDATE $tablename SET $columnname";
+            $this->con->query($query);
         }
 
         //DROP OR DELETE A ROW IN A SPECIFIC TABLE
-        public function data_delete () {
-            
+        public function data_delete ($tablename, $condition) {
+            //$str = $this->addslash($value);
+            $query = "DELETE FROM $tablename WHERE $condition";
+            $this->con->query($query);
+        }
+
+        //DROP OR DELETE ALL OF THE ROW IN A SPECIFIC TABLE
+        public function data_delete_all ($tablename) {
+            //$str = $this->addslash($value);
+            $query = "DELETE FROM $tablename";
+            $this->con->query($query);
         }
 
         //END OR CLOSE THE DATABASE

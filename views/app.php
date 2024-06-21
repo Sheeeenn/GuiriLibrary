@@ -5,7 +5,7 @@ include("libraries\GLIB.php");
 use glib\database;
 
 /* ADD INSTANCE ( OOP ) */
-//$data = new database ("localhost", "root", "", "testlib", "3306");
+$data = new database ("localhost", "root", "", "testlib", "3306");
 
 /* DATA CREATE */
 //$data->data_create("users", "username, password", "'justin josh', 'guiriba2'");
@@ -16,6 +16,12 @@ use glib\database;
 //     echo $player['username']."<br>";
 // }
 
+/* DATA UPDATE */
+//$data->data_update("users", "username = 'YSheen'", "id = 15");
+
+/* DATA UPDATE */
+//$data->data_delete("users", "id = 11");
+
 /* DATA END */
 //$data->data_end();
 
@@ -25,6 +31,7 @@ use glib\database;
     <head>
         <title>
             TEST LIBRARY
+            
         </title>
         <link rel="stylesheet" type="text/css" href="views/bootstrap/css/bootstrap.min.css">
         <script src="views/bootstrap/js/bootstrap.bundle.min.js"></script>
